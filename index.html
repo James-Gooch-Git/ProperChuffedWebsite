@@ -61,12 +61,22 @@
   
   
   <main>
-    <section id="about" class="card">
-      <h2>About Us</h2>
-      <p>
-        Proper Chuffed Productions is an award-winning, Sheffield-based theatre company. We create energetic, socially relevant plays that champion northern voices and put women’s experiences centre stage. Since 2022, we've sold out runs in Sheffield, Leeds, London, and at the Edinburgh Fringe.
-      </p>
+    <section id="about" class="card about-carousel">
+      <div class="carousel-images">
+        <img src="images/play1.jpg" alt="Previous Show 1" class="active">
+        <img src="images/play2.jpg" alt="Previous Show 2">
+        <img src="images/play3.jpg" alt="Previous Show 3">
+        <!-- Add more images as needed -->
+      </div>
+
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Proper Chuffed Productions is an award-winning, Sheffield-based theatre company. We create energetic, socially relevant plays that champion northern voices and put women’s experiences centre stage. Since 2022, we've sold out runs in Sheffield, Leeds, London, and at the Edinburgh Fringe.
+        </p>
+      </div>
     </section>
+
     
     <section id="upcoming" class="card">
       <h2>Upcoming Show</h2>
@@ -148,7 +158,7 @@
         We’re a grassroots company making theatre happen on pure passion (and your generosity!).<br>
         Support Proper Chuffed Productions on GoFundMe and help us bring more original work to the stage.
       </p>
-      <a href="https://www.gofundme.com/your-campaign" class="support-btn" target="_blank">Donate on GoFundMe</a>
+      <a href="https://gofund.me/51409a0a" class="support-btn" target="_blank">Donate on GoFundMe</a>
     </section>
     
     <section id="contact" class="card">
@@ -172,5 +182,16 @@
   <footer>
     &copy; 2025 Proper Chuffed Productions
   </footer>
+  <script>
+    const slides = document.querySelectorAll('.carousel-images img');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000); // 4 second interval
+  </script>
+
 </body>
 </html>
