@@ -153,3 +153,35 @@ body {
     }
   }
    
+.team-member {
+  width: 200px;
+  margin: 1em;
+  text-align: center;
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.team-member img {
+  width: 180px;            /* or 100% if inside a container */
+  height: auto;
+  object-fit: contain;     /* preserve full image */
+  border-radius: 0;        /* disables circle crop */
+  box-shadow: 0 2px 8px #0002;
+}
+.show-posters {
+  display: flex;
+  gap: 2em;                /* spacing between the posters */
+  justify-content: flex-end;  /* align posters to the right */
+  align-items: center;        /* vertically align */
+  margin-top: -2em;           /* optional: pull them up a bit */
+  margin-right: 2em;          /* optional: spacing from the right edge */
+}
+
+.show-posters .poster img {
+  max-height: 280px;        /* adjust height as needed */
+  border-radius: 16px;      /* optional: rounded corners */
+}
