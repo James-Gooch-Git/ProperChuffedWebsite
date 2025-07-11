@@ -247,4 +247,51 @@ body {
     font-size: 1em;
     padding: 0.6em 1.2em;
   }
+  @media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #222;
+    padding: 1em;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8em;
+    background-color: #222;
+    padding: 1em;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3em 0;
+  }
+}
+
 }
