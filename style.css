@@ -185,3 +185,66 @@ body {
   max-height: 280px;        /* adjust height as needed */
   border-radius: 16px;      /* optional: rounded corners */
 }
+/* Make hero posters responsive */
+.show-posters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.show-posters .poster img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Improve team grid on small screens */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.team-member {
+  width: 180px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Responsive nav if needed */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9em;
+    padding: 1em;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding: 0 1em;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .main-btn {
+    display: inline-block;
+    margin-top: 1em;
+    font-size: 1em;
+    padding: 0.6em 1.2em;
+  }
+}
